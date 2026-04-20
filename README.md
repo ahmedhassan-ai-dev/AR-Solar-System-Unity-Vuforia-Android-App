@@ -1,55 +1,70 @@
-# 🪐 AR Solar System Explorer
+# 🪐 Augmented Reality Solar System Explorer
 
-An interactive **Augmented Reality (AR)** application developed using **Unity** and **Vuforia** for the course **Image Processing (AI 306)**. This project visualizes the solar system in 3D by recognizing physical image targets and rendering interactive celestial bodies.
-
----
-
-## 🌟 Project Overview
-
-This AR system bridges the gap between physical markers and digital 3D visualization, allowing users to:
-* **Scan** predefined image targets (markers) using a camera.
-* **Render** realistic 3D planets in real-time with smooth textures.
-* **Interact** with virtual objects and view dynamic planetary data via a modern UI.
-* **Simulate** orbital movements and rotations using C# scripting.
+[cite_start]An advanced **Augmented Reality (AR)** educational application developed using **Unity** and **Vuforia**[cite: 1, 3]. [cite_start]This project provides an immersive experience where users can visualize and interact with 3D planetary models by scanning physical image targets[cite: 4, 8].
 
 ---
 
-## 🛠 Technologies Used
-
-* **Game Engine:** Unity (3D Environment)
-* **AR SDK:** Vuforia Engine (Image Recognition & Tracking)
-* **Language:** C# Programming
-* **Concepts:** Image Feature Extraction, Coordinate Mapping, and Real-time Rendering.
-
----
-
-## 📂 Source Code & Structure
-
-This repository contains the **cleaned source code**, scripts, and core assets.
-* `Assets/Scripts`: Contains all C# logic for movement and UI.
-* `Assets/Prefabs`: Pre-configured planet models and AR components.
-* *Note: Unity-generated folders like `Library/`, `Temp/`, and `Build/` are excluded for optimization.*
+## 🌟 Project Features
+* [cite_start]**AR-based Visualization:** High-quality 3D rendering of planets upon marker detection[cite: 8].
+* [cite_start]**Interactive UI:** Dynamic start menu, sound controls, and info panels[cite: 8].
+* [cite_start]**Clickable Planets:** Users can interact with planets to trigger detailed information[cite: 9, 52].
+* [cite_start]**Smooth Planet Rotation:** Realistic celestial movement using Quaternion interpolation for visual stability[cite: 11, 57].
+* [cite_start]**Intelligent Tracking:** Auto-hiding UI elements when the camera loses the image target[cite: 12, 59].
+* [cite_start]**Android Optimized:** Built for mobile deployment (Targeting API Level 29+)[cite: 63].
 
 ---
 
-## 🚀 Full Project Access
-
-Because the full Unity project (including high-res textures and 3D models) exceeds standard Git limits, you can download the complete, ready-to-run version here:
-
-📌 **[Google Drive - Full Version](https://drive.google.com/file/d/1sYOrxn_T1B3xrwDxuDCUremLlSunGgNk/view)**
-
----
-
-## 📖 How it Works (Image Processing Context)
-
-The project applies key Image Processing principles:
-1.  **Feature Detection:** Identifying unique "natural features" in the target images.
-2.  **Pose Estimation:** Calculating the position and orientation of the camera relative to the physical marker.
-3.  **Augmentation:** Overlaying the digital 3D model onto the real-world video feed.
+## 🛠 Technologies & Tools
+* [cite_start]**Game Engine:** Unity Engine[cite: 6].
+* [cite_start]**AR Platform:** Vuforia Engine[cite: 6].
+* [cite_start]**Programming Language:** C#[cite: 6].
+* [cite_start]**UI System:** Unity UI System (Screen Space - Overlay)[cite: 6, 38].
+* [cite_start]**Assets:** 3D models from Unity Asset Store and UI icons from Flaticon[cite: 116].
 
 ---
 
-## 📫 Contact
+## 📂 Project Structure (Unity Hierarchy)
+The project is organized for scalability and clean management:
+* [cite_start]**AR Camera:** The primary viewport for AR rendering[cite: 24].
+* [cite_start]**ImageTargets (Planets):** Individual markers for each planet in the solar system[cite: 25].
+* [cite_start]**Main Canvas:** Contains the `MainUI` (Start/Sound buttons) and `InfoPanel` for infographics [cite: 15-21].
+* [cite_start]**Managers:** `GameManager` and `AudioManager` to handle global app states and sound [cite: 22-23].
 
-Developed as part of the **Image Processing (AI 306)** course.  
-For any inquiries or technical questions, feel free to reach out via my GitHub profile.
+---
+
+## 💻 Key Scripts Implementation
+
+### 1. Interactivity (`PlanetClick.cs`)
+[cite_start]Uses **Physics Raycasting** to detect user touches on 3D planets and display their corresponding 2D infographic panels[cite: 51, 72, 74].
+
+### 2. Smooth Rotation (`SmoothRotate.cs`)
+[cite_start]Applies `Quaternion.Slerp` for smooth, consistent rotation of planets, ensuring a professional look in the AR environment[cite: 85, 88].
+
+### 3. UI Control (`PlanetInfoController.cs`)
+[cite_start]Manages the dynamic display of information, enabling the semi-transparent info panel when a planet is selected[cite: 45, 79, 83].
+
+---
+
+## 🚀 Getting Started & Build
+1.  [cite_start]**Environment Setup:** Enable Vuforia in Unity Player Settings and add the AR Camera [cite: 31-32].
+2.  [cite_start]**Markers:** Print the image targets (Rated 4-5 stars by Vuforia for high tracking stability) [cite: 119-131].
+3.  [cite_start]**Full Project Link:** 🔗 **[Download Full Version from Google Drive](https://drive.google.com/file/d/1sYOrxn_T1B3xrwDxuDCUremLlSunGgNk/view)** (Includes large assets like NDK, SDK, and models)[cite: 97, 103].
+
+---
+
+## ⚠️ Challenges & Solutions
+* [cite_start]**Tracking Instability:** Solved by using advanced smoothing techniques for 3D object rotation[cite: 100, 105].
+* [cite_start]**Build Conflicts:** Resolved Android SDK/NDK setting issues and switched Input Handling to "Both" for better compatibility[cite: 102, 103].
+
+---
+
+## 🎯 Future Roadmap
+* [cite_start]Add voice narration for each planet[cite: 112].
+* [cite_start]Implement planet comparison features[cite: 112].
+* [cite_start]Enhance UI with advanced visual effects and animations (Fade/Zoom)[cite: 112].
+
+---
+
+## 👤 Developer
+**Course:** Image Processing (AI 306)  
+[cite_start]Developed as a demonstration of how AR can transform educational experiences[cite: 172].
